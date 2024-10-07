@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#1D1E25",
+            },
+            screens: {
+              xs: "320px",
+              // => @media (min-width: 320px) { ... }
+
+              sm: "640px",
+              // => @media (min-width: 640px) { ... }
+              md: "768px",
+              // => @media (min-width: 768px) { ... }
+
+              lg: "1024px",
+              // => @media (min-width: 1024px) { ... }
+
+              xl: "1280px",
+              // => @media (min-width: 1280px) { ... }
+
+              "2xl": "1536px",
+            },
+            fontFamily: {
+              Inter: ["Inter", "system-ui"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Inter">
+    <nav class="shadow">
+      <div class="container mx-auto flex justify-between items-center">
+        <div>
+          <img src="./img/Logo.png" alt="" />
+        </div>
+        <ul
+          class="xs:hidden sm:hidden md:flex justify-between items-center gap-3 text-lg font-medium"
+        >
+          <li class="hover:text-gray-600 hover:cursor-pointer font-[]">Home</li>
+          <li class="hover:text-gray-600 hover:cursor-pointer">About</li>
+          <li class="hover:text-gray-600 hover:cursor-pointer">Blog</li>
+          <li class="hover:text-gray-600 hover:cursor-pointer">Pricing</li>
+          <li class="hover:text-gray-600 hover:cursor-pointer">Contact us</li>
+        </ul>
+        <div class="hamburger xs:flex sm:flex md:hidden flex-col gap-1">
+          <div class="w-[40px] h-1 bg-gray-600"></div>
+          <div class="w-[40px] h-1 bg-gray-600"></div>
+          <div class="w-[40px] h-1 bg-gray-600"></div>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container mx-auto">
+        <h1
+          class="mt-24 xs:text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-dark font-bold xs:w-full md:w-[650px] lg:w-[850px]"
+        >
+          Everything you need to get the attention of your audience
+        </h1>
+        <div
+          class="flex xs:flex-col sm:flex-col md:flex-row justify-between items-center mt-24"
+        >
+          <div class="flex items-start gap-2 xs:w-full md:w-[80%] lg:w-[850px]">
+            <div class="w-[9%] h-[1px] bg-dark mt-1"></div>
+            <p
+              class="w-[90%] xs:text-base md:text-lg lg:text-3xl font-semibold"
+            >
+              Our digital agency helps clients develop, implement and maintain
+              successful digital marketing strategies across all channels. Also
+              work with you to build your website and create online businesses
+              that grow.
+            </p>
+          </div>
+          <div class="flex justify-end xs:w-full">
+            <img
+              class="xs:w-[74px] md:w-[127px]"
+              src="./img/Linked Path.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
